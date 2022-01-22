@@ -16,11 +16,6 @@
 export default {
   data() {
     return {
-      tagList: ['Echarts', 'Element', 'Hadoop', 'IDEA', 'Java',
-        'JavaScript', 'Jenkins', 'shell', 'Linux', 'MQ', 'Markdown',
-        'MySQL', 'OpenCV', 'SSL', 'Spring', 'SpringBoot', 'SpringCloud',
-        'SpringMVC', 'SpringSecurity', 'Swagger', 'Thymeleaf', 'Tomcat',
-        'Vue', '树莓派', '持续集成'],
       colors: [
         '#7F4B71',
         '#6C6E6B',
@@ -39,6 +34,9 @@ export default {
         '#977677'
       ]
     }
+  },
+  props: {
+    tagList: Array
   }
 }
 </script>

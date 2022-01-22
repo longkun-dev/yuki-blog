@@ -28,12 +28,13 @@
 <script>
 export default {
   data() {
-    return {
-      author: 'chenxii81',
-      postCount: 85,
-      tagCount: 37,
-      categoryCount: 39
-    }
+    return {}
+  },
+  props: {
+    author: String,
+    postCount: Number,
+    tagCount: Number,
+    categoryCount: Number
   }
 }
 </script>

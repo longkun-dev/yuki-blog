@@ -4,7 +4,7 @@
       <el-menu-item :index="item.category">{{ item.menuName }}</el-menu-item>
     </template>
     <el-submenu :index="item.category" v-else>
-            <template slot="title">{{ item.menuName }}</template>
+      <template slot="title">{{ item.menuName }}</template>
       <el-menu-item v-for="(subItem, index) in item.children" :key="index"
                     :index="subItem.category">{{ subItem.menuName }}
       </el-menu-item>
@@ -26,4 +26,5 @@ export default {
 }
 </script>
 <style>
+
 </style>

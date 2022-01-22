@@ -6,7 +6,11 @@
         <span style="float: right">{{ createDate }}</span>
       </el-row>
       <el-row style="margin-bottom: -8px">
-        <h3><a href="#" style="text-decoration: none;color: inherit">{{ title }}</a></h3>
+        <h3>
+          <span href="post/post001" @click="toDetail" style="text-decoration: none; color: inherit">
+            {{ title }}
+          </span>
+        </h3>
       </el-row>
       <hr style="opacity: 0.5">
       <el-row class="part3">
@@ -21,12 +25,20 @@
 <script>
 export default {
   data() {
-    return {
-      title: '6年ぶりに歩いた福岡アイランドシティの発展ぶりに仰天する【香椎ウォーク】',
-      category: '徒步',
-      createDate: '2021年11月30日',
-      shortDesc: '2021年11月、福岡市東区の香椎エリアを歩いてきました。' +
-        '（JR香椎駅→香椎浜北公園→アイランドシティ中央公園→あいたか橋→香椎花園前駅→JR香椎駅）'
+    return {}
+  },
+  props: {
+    title: String,
+    category: String,
+    createDate: String,
+    shortDesc: String
+  },
+  methods: {
+    toDetail() {
+      this.$router.push({
+        path: 'post/post001',
+        query: {}
+      })
     }
   }
 }

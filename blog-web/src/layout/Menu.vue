@@ -129,4 +129,11 @@ export default {
 .site-title {
   float: left !important;
 }
+
+.el-submenu__icon-arrow {
+  position: relative;
+  margin: 5% 5px;
+  top: 0;
+  right: 0;
+}
 </style>

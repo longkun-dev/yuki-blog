@@ -6,20 +6,16 @@
       </el-header>
       <el-container id="main">
         <el-main class="el-main">
-          <Post></Post>
-          <Post></Post>
-          <Post></Post>
-          <Post></Post>
-          <Post></Post>
+          <Post v-for="item in postList" :key="item.index" :item="item" v-bind="item"></Post>
         </el-main>
         <el-aside style="width: 290px; margin: 0 8px">
-          <User></User>
-          <Tag></Tag>
-          <SiteInfo></SiteInfo>
+          <User v-bind="userInfo"></User>
+          <Tag v-bind:tagList="tagList"></Tag>
+          <SiteInfo v-bind="siteInfo"></SiteInfo>
         </el-aside>
       </el-container>
       <el-footer>
-        <Footer></Footer>
+        <Footer v-bind="footerInfo"></Footer>
       </el-footer>
     </el-container>
   </div>
@@ -40,6 +36,64 @@ export default {
     SiteInfo,
     Post,
     Footer
+  },
+  data() {
+    return {
+      userInfo: {
+        author: 'im-yuki',
+        postCount: 10,
+        tagCount: 20,
+        categoryCount: 5
+      },
+      postList: [{
+        title: '6年ぶりに歩いた福岡アイランドシティの発展ぶりに仰天する【香椎ウォーク】',
+        category: '徒步',
+        createDate: '2021年11月30日',
+        shortDesc: '2021年11月、福岡市東区の香椎エリアを歩いてきました。' +
+          '（JR香椎駅→香椎浜北公園→アイランドシティ中央公園→あいたか橋→香椎花園前駅→JR香椎駅）'
+      }, {
+        title: '6年ぶりに歩いた福岡アイランドシティの発展ぶりに仰天する【香椎ウォーク】',
+        category: '徒步',
+        createDate: '2021年11月30日',
+        shortDesc: '2021年11月、福岡市東区の香椎エリアを歩いてきました。' +
+          '（JR香椎駅→香椎浜北公園→アイランドシティ中央公園→あいたか橋→香椎花園前駅→JR香椎駅）'
+      }, {
+        title: '6年ぶりに歩いた福岡アイランドシティの発展ぶりに仰天する【香椎ウォーク】',
+        category: '徒步',
+        createDate: '2021年11月30日',
+        shortDesc: '2021年11月、福岡市東区の香椎エリアを歩いてきました。' +
+          '（JR香椎駅→香椎浜北公園→アイランドシティ中央公園→あいたか橋→香椎花園前駅→JR香椎駅）'
+      }, {
+        title: '6年ぶりに歩いた福岡アイランドシティの発展ぶりに仰天する【香椎ウォーク】',
+        category: '徒步',
+        createDate: '2021年11月30日',
+        shortDesc: '2021年11月、福岡市東区の香椎エリアを歩いてきました。' +
+          '（JR香椎駅→香椎浜北公園→アイランドシティ中央公園→あいたか橋→香椎花園前駅→JR香椎駅）'
+      }, {
+        title: '6年ぶりに歩いた福岡アイランドシティの発展ぶりに仰天する【香椎ウォーク】',
+        category: '徒步',
+        createDate: '2021年11月30日',
+        shortDesc: '2021年11月、福岡市東区の香椎エリアを歩いてきました。' +
+          '（JR香椎駅→香椎浜北公園→アイランドシティ中央公園→あいたか橋→香椎花園前駅→JR香椎駅）'
+      }],
+      tagList: ['Echarts', 'Element', 'Hadoop', 'IDEA', 'Java',
+              'JavaScript', 'Jenkins', 'shell', 'Linux', 'MQ', 'Markdown',
+              'MySQL', 'OpenCV', 'SSL', 'Spring', 'SpringBoot', 'SpringCloud',
+              'SpringMVC', 'SpringSecurity', 'Swagger', 'Thymeleaf', 'Tomcat',
+              'Vue', '树莓派', '持续集成'],
+      siteInfo: {
+        postCount: 86,
+        runTime: 1269,
+        visitorCount: 1200,
+        totalVisit: 1300,
+        lastUpdateDate: '2021年10月09日'
+      },
+      footerInfo: {
+        since: '©️2018-2022',
+        author: 'chenxii81',
+        icp: '墙ICP备 01030930号'
+      }
+    }
   }
 }
 </script>

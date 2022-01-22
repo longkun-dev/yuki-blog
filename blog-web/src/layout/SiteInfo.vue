@@ -30,13 +30,14 @@
 <script>
 export default {
   data() {
-    return {
-      postCount: 86,
-      runTime: 1269,
-      visitorCount: 1200,
-      totalVisit: 1300,
-      lastUpdateDate: '2021年10月09日'
-    }
+    return {}
+  },
+  props: {
+    postCount: Number,
+    runTime: Number,
+    visitorCount: Number,
+    totalVisit: Number,
+    lastUpdateDate: String
   }
 }
 </script>

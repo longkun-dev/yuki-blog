@@ -12,11 +12,12 @@
 <script>
 export default {
   data() {
-    return {
-      since: '©️2018-2022',
-      author: 'chenxii81',
-      icp: '墙ICP备 01030930号'
-    }
+    return {}
+  },
+  props: {
+    since: String,
+    author: String,
+    icp: String
   }
 }
 </script>
