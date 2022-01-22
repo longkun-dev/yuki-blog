@@ -12,7 +12,7 @@
           <Post></Post>
           <Post></Post>
         </el-main>
-        <el-aside style="width: 28%; position: sticky; top: 40px">
+        <el-aside style="width: 290px; margin: 0 8px">
           <User></User>
           <Tag></Tag>
           <SiteInfo></SiteInfo>
@@ -25,12 +25,12 @@
   </div>
 </template>
 <script>
-import Menu1 from "../layout/Menu";
-import User from "../layout/User";
-import Tag from "../layout/Tag";
-import SiteInfo from "../layout/SiteInfo";
-import Post from "../layout/Post";
-import Footer from "../layout/Footer";
+import Menu1 from "../layout/Menu"
+import User from "../layout/User"
+import Tag from "../layout/Tag"
+import SiteInfo from "../layout/SiteInfo"
+import Post from "../layout/Post"
+import Footer from "../layout/Footer"
 
 export default {
   components: {
@@ -39,9 +39,9 @@ export default {
     Tag,
     SiteInfo,
     Post,
-    Footer,
-  },
-};
+    Footer
+  }
+}
 </script>
 <style>
 .el-header {
@@ -64,6 +64,6 @@ export default {
 
 #main {
   width: 1100px;
-  margin: 80px auto;
+  margin: 50px auto;
 }
 </style>

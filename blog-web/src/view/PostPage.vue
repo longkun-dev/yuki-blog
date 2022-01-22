@@ -62,7 +62,7 @@ export default {
 
 #main {
   width: 1100px;
-  margin: 80px auto;
+  margin: 60px auto;
 }
 
 </style>

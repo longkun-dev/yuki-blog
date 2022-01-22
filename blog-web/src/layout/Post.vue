@@ -5,7 +5,7 @@
         <el-tag>{{ category }}</el-tag>
         <span style="float: right">{{ createDate }}</span>
       </el-row>
-      <el-row>
+      <el-row style="margin-bottom: -8px">
         <h3><a href="#" style="text-decoration: none;color: inherit">{{ title }}</a></h3>
       </el-row>
       <hr style="opacity: 0.5">
@@ -35,10 +35,11 @@ export default {
 .box-card3 {
   height: 300px;
   width: auto;
-  padding: 25px 20px;
+  padding: 5px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 15px 8px;
 }
 
 .part3 {
@@ -50,6 +51,6 @@ export default {
 
 .part3 > img {
   width: 300px;
-  height: 200px;
+  height: 150px;
 }
 </style>

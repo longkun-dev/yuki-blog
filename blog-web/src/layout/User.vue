@@ -42,6 +42,7 @@ export default {
   width: 280px;
   height: 280px;
   text-align: center;
+  margin: 15px 0;
 }
 
 #avatar {
@@ -49,7 +50,6 @@ export default {
   height: 110px;
   border-radius: 50%;
   opacity: 0.9;
-  padding: 15px 0;
 }
 
 .author-name {
@@ -66,7 +66,6 @@ export default {
 .stat > div {
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
   padding: 5px 15px;
 }
 

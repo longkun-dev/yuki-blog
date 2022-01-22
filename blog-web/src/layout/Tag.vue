@@ -5,7 +5,7 @@
         <span>🏷️ 标签</span>
       </div>
       <div>
-        <div v-for="(tag, index) in tagList" class="tag">
+        <div v-for="(tag, index) in tagList" :key="tag" class="tag">
           <a href="#" :style="{color: colors[index % colors.length]}">{{ tag }}</a>
         </div>
       </div>
@@ -43,22 +43,12 @@ export default {
 }
 </script>
 <style>
-.el-card {
-  margin: 10px 10px;
-}
-
-.box-card {
-  width: 280px;
-  height: 300px;
-  max-height: 360px;
-}
-
 #tag-card {
   text-align: left;
-}
-
-.el-card__body {
-  padding: 0 10px;
+  margin: 15px 0;
+  width: 280px;
+  height: auto;
+  padding-bottom: 10px;
 }
 
 .tag {

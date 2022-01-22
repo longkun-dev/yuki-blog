@@ -1,43 +1,75 @@
 <template>
-  <div id="nav">
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal"
-             @select="handleSelect" style="padding: 0 36px">
-      <el-menu-item>chenxii81</el-menu-item>
-      <el-menu-item index="1">🏠 主页</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">💻 编程</template>
-        <el-menu-item index="2-1">🍵 Java</el-menu-item>
-        <el-menu-item index="2-2">🐍 Python</el-menu-item>
-        <el-menu-item index="2-3">📁 数据库</el-menu-item>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title">🎸 兴趣</template>
-        <el-menu-item index="3-1">🚴‍♀️ 骑行</el-menu-item>
-        <el-menu-item index="3-2">🚶‍♀️ 徒步</el-menu-item>
-      </el-submenu>
-      <el-menu-item index="4">🛩️ 航空</el-menu-item>
-      <el-menu-item index="4">🎬 电影</el-menu-item>
-      <el-menu-item index="4">🎵 音乐</el-menu-item>
-      <el-submenu index="5">
-        <template slot="title">🧸 关于</template>
-        <el-menu-item index="5-1">🚴‍♀️ 骑行</el-menu-item>
-        <el-menu-item index="5-2">🚶‍♀️ 徒步</el-menu-item>
-      </el-submenu>
+  <div>
+    <el-menu :default-active="activeIndex"
+             mode="horizontal" style="padding: 0 65px">
+      <el-menu-item index="/" class="site-title">yuki.im</el-menu-item>
+      <div style="float: right" class="menu-list">
+        <subMenu v-for="(menuItem, index) in menuList" :key="menuItem.index"
+          :index="index" :item="menuItem">
+      </subMenu>
+      </div>
     </el-menu>
   </div>
 </template>
 <script>
+import subMenu from './SubMenu.vue'
 export default {
-  name: 'menu',
+  name: "menu",
+  components: {
+    subMenu
+  },
   data() {
     return {
-      activeIndex: '1'
-    };
+      activeIndex: "1",
+      menuList: [{
+        menuName: "🏠 主页",
+        category: "/",
+        children: []
+      },
+      {
+        menuName: "💻 编程",
+        category: "Programming",
+        children: [{
+          menuName: "🍵 Java",
+          category: "Java",
+          children: []
+        }, {
+          menuName: "🐍 Python",
+          category: "Python",
+          children: []
+        }]
+      }, {
+        menuName: "🎹 音乐",
+        category: "Music",
+        children: []
+      }, {
+        menuName: "🎬 电影",
+        category: "Movie",
+        children: [{
+          menuName: "1 科幻片",
+          category: "Fiction",
+          children: []
+        }, {
+          menuName: "2 战争片",
+          category: "War",
+          children: []
+        }, {
+          menuName: "3 爱情片",
+          category: "War",
+          children: []
+        }]
+      }, {
+        menuName: "🐳 友链",
+        category: "Link",
+        children: []
+      }, {
+        menuName: "🙂 关于",
+        category: "About",
+        children: []
+      }]
+    }
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    }
   }
 }
 </script>
@@ -61,21 +93,40 @@ export default {
   color: #303133;
 }
 
-.el-menu--horizontal > .el-submenu {
+.el-submenu {
   border-bottom: 2px solid #fff;
   color: #303133;
 }
 
-
-.el-menu--horizontal > .el-menu-item:hover {
+.el-menu-item:hover {
   border-bottom: 2px solid #409eff !important;
-  transition-duration: 1s !important;
+  transition-duration: 1.2s !important;
   opacity: 0.7;
 }
 
-.el-menu--horizontal > .el-submenu:hover {
+.el-submenu:hover {
   border-bottom: 2px solid #409eff !important;
-  transition-duration: 1s !important;
+  transition-duration: 1.2s !important;
   opacity: 0.7;
+}
+
+.el-menu--collapse .el-menu .el-submenu, .el-menu--popup {
+  min-width: 120px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.site-title {
+  float: left !important;
 }
 </style>

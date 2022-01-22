@@ -44,6 +44,7 @@ export default {
 .box-card2 {
   width: 280px;
   height: auto;
+  margin: 15px 0;
 }
 
 .box-card2-item {
