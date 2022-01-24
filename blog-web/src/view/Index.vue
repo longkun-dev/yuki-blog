@@ -145,4 +145,12 @@ export default {
   -webkit-transition: all 2s ease 1s;
   transition: all 2s ease 1s;
 }
+
+.el-menu-item {
+  font-size: 16px !important;
+}
+
+.el-submenu__title {
+  font-size: 16px !important;
+}
 </style>

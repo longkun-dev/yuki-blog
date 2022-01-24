@@ -2,7 +2,9 @@
   <div>
     <el-card class="box-card3">
       <el-row>
-        <el-tag>{{ category }}</el-tag>
+        <span><i class="el-icon-folder"></i> {{ category }}</span>
+        <span>&nbsp;&nbsp;<i class="el-icon-price-tag"></i> 测试标签</span>
+        <!-- <el-tag>{{ category }}</el-tag> -->
         <span style="float: right">{{ createDate }}</span>
       </el-row>
       <el-row style="margin-bottom: -8px">
