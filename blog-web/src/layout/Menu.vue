@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-menu :default-active="activeIndex"
+    <el-menu :default-active="activeIndex" router
              mode="horizontal" style="padding: 0 65px">
       <el-menu-item index="/" class="site-title">yuki.im</el-menu-item>
       <div style="float: right" class="menu-list">
@@ -68,8 +68,6 @@ export default {
         children: []
       }]
     }
-  },
-  methods: {
   }
 }
 </script>

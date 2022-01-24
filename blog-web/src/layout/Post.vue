@@ -7,7 +7,7 @@
       </el-row>
       <el-row style="margin-bottom: -8px">
         <h3>
-          <span href="post/post001" @click="toDetail" style="text-decoration: none; color: inherit">
+          <span @click="toDetail" style="text-decoration: none; color: inherit">
             {{ title }}
           </span>
         </h3>

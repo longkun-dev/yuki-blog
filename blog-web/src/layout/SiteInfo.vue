@@ -21,7 +21,7 @@
         <span>{{ totalVisit }}</span>
       </div>
       <div class="box-card2-item">
-        <span>最后更新时间 : </span>
+        <span>最后更新 : </span>
         <span>{{ lastUpdateDate }}</span>
       </div>
     </el-card>

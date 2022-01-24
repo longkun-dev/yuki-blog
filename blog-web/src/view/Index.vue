@@ -1,14 +1,14 @@
 <template>
   <div>
     <el-container>
-      <el-header style="z-index: 2001">
+      <el-header style="z-index: 2001" ref="scrollOne" id="top-nav">
         <Menu1></Menu1>
       </el-header>
       <el-container id="main">
         <el-main class="el-main">
           <Post v-for="item in postList" :key="item.index" :item="item" v-bind="item"></Post>
         </el-main>
-        <el-aside style="width: 290px; margin: 0 8px">
+        <el-aside style="width: 290px; margin: 0 0">
           <User v-bind="userInfo"></User>
           <Tag v-bind:tagList="tagList"></Tag>
           <SiteInfo v-bind="siteInfo"></SiteInfo>
@@ -94,6 +94,24 @@ export default {
         icp: '墙ICP备 01030930号'
       }
     }
+  },
+  mounted() {
+    // window.addEventListener("scroll", this.handleScroll)
+  },
+  destroyed() {
+    // document.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      //获取滚动时的高度
+      // let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      // if (scrollTop > 130) {
+      //   //大于65的时候要做的操作
+      //   document.getElementById("top-nav").classList.add("top-nav")
+      // } else {
+      //   document.getElementById("top-nav").classList.remove('top-nav')
+      // }
+    }
   }
 }
 </script>
@@ -113,11 +131,18 @@ export default {
 }
 
 .el-main {
-  padding: 0 0;
+  padding: 0 8px;
 }
 
 #main {
   width: 1100px;
   margin: 50px auto;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 2s ease 1s;
+  transition: all 2s ease 1s;
 }
 </style>
